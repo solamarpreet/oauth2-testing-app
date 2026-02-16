@@ -5,11 +5,11 @@ import TokenInspector from './components/TokenInspector';
 
 // Main App Content Component
 const AppContent = () => {
-  const { tokenData, token, idToken, login, logOut, error, loginInProgress } = useAuthContext();
+  const { tokenData, token, idToken, logIn, logOut, error, loginInProgress } = useAuthContext();
 
   const handleLogin = async () => {
     try {
-      await login();
+      await logIn();
     } catch (err) {
       console.error('Login error:', err);
     }

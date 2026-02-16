@@ -5,9 +5,9 @@
 This is a React-based OAuth2 testing application for Microsoft Entra (Azure AD) that implements the Authorization Code Flow with PKCE. The application allows developers to test the OAuth2 flow, inspect tokens, and view decoded claims.
 
 **Tech Stack:**
-- React 18.2
-- Vite 5.0 (Build tool)
-- react-oauth2-code-pkce 1.17.1 (OAuth2 library)
+- React 19.2
+- Vite 7.3 (Build tool)
+- react-oauth2-code-pkce 1.23.4 (OAuth2 library)
 - jwt-decode 4.0 (JWT decoding)
 
 ---
@@ -172,7 +172,7 @@ oauth2-testing-app/
     tokenData,        // Decoded token data (from ID token)
     token,            // Access token (raw JWT)
     idToken,          // ID token (raw JWT)
-    login,            // Function to trigger login
+    logIn,            // Function to trigger login
     logOut,           // Function to logout
     error,            // Authentication errors
     loginInProgress   // Boolean for loading state
@@ -576,6 +576,13 @@ Creates optimized bundle in `dist/` folder.
   - Configuration now loaded from environment variables
   - Updated documentation for env-based configuration
   - All sensitive values externalized
+
+- **v1.2.0** (2026-02-16): Dependency updates
+  - React 19.2 with Vite 7.3
+  - Updated react-oauth2-code-pkce to 1.23.4
+  - Updated @vitejs/plugin-react to 5.1.4
+  - Fixed deprecated `login` → `logIn` API usage
+  - Resolved esbuild security vulnerability
 
 - **v1.0.0** (2026-02-16): Initial project structure
   - React 18.2 with Vite
